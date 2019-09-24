@@ -1,0 +1,4 @@
+[submodule "crbll0/l10n_do_grow"]
+	path = crbll0/l10n_do_grow
+	url = git@github.com:crbll0/l10n_do_grow.git
+	branch = master
