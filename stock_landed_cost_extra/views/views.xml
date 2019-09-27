@@ -1,0 +1,19 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="view_stock_landed_cost_form">
+      <field name="name">view_stock_landed_cost_form</field>
+      <field name="model">stock.landed.cost</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='cost_lines']" position="after">
+          <tree name="no_cost_lines">
+              <field name="cost_id"/>
+              <field name="cost_line_id"/>
+              <field name="product_id"/>
+          </tree>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>
