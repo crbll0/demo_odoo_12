@@ -11,8 +11,8 @@ class LandedCost(models.Model):
 
 class LandedCostLinesRemove(models.Model):
     _name = 'stock.landed.cost.lines.remove'
+    _description = 'Stock Landed Cost Lines Remove'
     
-    cost_id = fields.Many2one('stock.landed.cost', 'Landed Cost')
-    
-    cost_line_id = fields.Many2one('stock.landed.cost.lines', 'Costo')
-    product_id = fields.Many2one('product.product', 'Producto')
+    cost_id = fields.Many2one('stock.landed.cost', string='Landed Cost')
+    cost_line_id = fields.Many2one('stock.landed.cost.lines', string='Costo')
+    product_id = fields.Many2one('product.product', string='Producto')
