@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Stock_Landed Cost Extra",
+    'name': "Stock Landed Cost Extra",
 
     'summary': """
     
