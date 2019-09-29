@@ -7,11 +7,15 @@
       <field name="inherit_id" ref="stock_landed_costs.view_stock_landed_cost_form"/>
       <field name="arch" type="xml">
         <xpath expr="//field[@name='cost_lines']" position="after">
+            <separator string="Productos Exentos de Costo"/>
+            <p class="oe_grey">
+                Especifique que tipo de Costo no va a ser incluido al producto.
+            </p>
           <field name="no_cost_lines">
-              <tree>
-                  <field name="cost_id"/>
-                  <field name="cost_line_id"/>
-                  <field name="product_id"/>
+              <tree editable="bottom">
+                  <field name="cost_id" invisible="1"/>
+                  <field name="cost_line_id" domain="[('cost_id', '=', parent.id)]"/>
+                  <field name="product_id" />
               </tree>
           </field>
         </xpath>
